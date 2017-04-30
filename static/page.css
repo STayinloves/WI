@@ -1,0 +1,44 @@
+body {
+    padding: 15%;
+}
+
+.CodeMirror {
+    font-family: 'Roboto Mono', Monaco, courier, monospace;
+    height: 40vh;
+}
+
+.cm-fat-cursor .CodeMirror-cursor {
+    background-color: #4fc08d;
+}
+
+div.CodeMirror span.CodeMirror-matchingbracket {
+    color: #4fc08d;
+}
+
+pre {
+    font-family: 'Roboto Mono', Monaco, courier, monospace;
+}
+
+button {
+    padding: 0.75em 2em;
+    border-radius: 2em;
+    display: inline-block;
+    color: #fff;
+    background-color: #4fc08d;
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+    border: 1px solid #4fc08d;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #148250;
+}
+
+button:focus {
+    outline: none;
+}
+
+#submit {
+    float: right;
+}

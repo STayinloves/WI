@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WI Demo</title>
+
+    <link rel="stylesheet" href="static/codemirror/codemirror.css">
+    <link rel="stylesheet" href="static/codemirror/solarized.css">
+    <script src="static/codemirror/codemirror.js"></script>
+    <script src="static/codemirror/matchbrackets.js"></script>
+    <script src="static/codemirror/go.js"></script>
+    <script src="static/codemirror/vim.js"></script>
+    <script src="static/vue.min.js"></script>
+    <script src="static/axios.min.js"></script>
+    <script src="static/qs.js"></script>
+    <link rel="stylesheet" href="static/page.css">
+</head>
+<body>
+<form><textarea id="code" name="code">
+// test program
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("hello WI")
+}
+</textarea></form>
+<div id="pane">
+    <button id="submit" @click="runCode">Run</button>
+    <pre id="runResult" v-text="result" v-if="!waitRun && !waitServer"></pre>
+    <pre v-if="waitServer && !waitRun">wait server...</pre>
+    <pre v-if="waitRun">Please try to run some code</pre>
+</div>
+<script src="static/page.js"></script>
+</body>
+</html>
